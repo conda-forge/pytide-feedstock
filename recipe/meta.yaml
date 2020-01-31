@@ -1,5 +1,5 @@
 {% set name = "pytide" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CNES/pangeo-{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d64df7850ab60b840a08c993a3f441d15194d4a810030df73fd345839f9e786e
+  sha256: 83e3dd51235445c357abe6b07d62f2b024e898b2e8eee735d5660bc69b8ef972
 build:
   number: 0
   script: '{{ PYTHON }} -m pip install . -vv'
