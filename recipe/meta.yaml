@@ -1,5 +1,6 @@
 {% set name = "pytide" %}
 {% set version = "1.2.2" %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +10,7 @@ source:
   url: https://github.com/CNES/pangeo-{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1497a1b6b64a57fbecc1e9d58874ee58b651f8cf29e2a80a5042443b6b19de35
 build:
-  number: 0
+  number: {{ build }}
   script: '{{ PYTHON }} -m pip install . -vv'
   skip: true  # [linux32 or win32 or py<36]
 
@@ -28,7 +29,8 @@ requirements:
   run:
     - {{ pin_compatible('numpy') }}
     - python
-    - mkl
+    - mkl  # [linux or win]
+    - llvm-openmp  # [linux]
 
 test:
   imports:
