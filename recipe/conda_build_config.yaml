@@ -1,2 +1,5 @@
 cxx_compiler_version:  # [osx]
   - 8                  # [osx]
+
+mkl:
+  - 2020.1
