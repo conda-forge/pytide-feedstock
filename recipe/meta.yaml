@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/CNES/pangeo-{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2572f4378bc9ab8e2aeadb13c2bd0d5ba732a3106dc856645da9a9dfef848f7e
+  sha256: 3b4766b49baffede64cc07fc7cd3ff0eb8154f39c95dc4fd50e135ec91c3b852
 build:
   number: {{ build }}
   script: '{{ PYTHON }} -m pip install . -vv'
