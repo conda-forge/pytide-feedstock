@@ -30,7 +30,6 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - python
     - mkl  # [linux or win]
-    - llvm-openmp  # [linux]
 
 test:
   imports:
