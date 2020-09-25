@@ -1,6 +1,6 @@
 {% set name = "pytide" %}
-{% set version = "1.2.2" %}
-{% set build = 1 %}
+{% set version = "1.2.3" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/CNES/pangeo-{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1497a1b6b64a57fbecc1e9d58874ee58b651f8cf29e2a80a5042443b6b19de35
+  sha256: 890096aa3e90f09314aefd6ca3e9ba9bf2b2ccc1565904e3d9f2bde1e11c76f8
 build:
   number: {{ build }}
   script: '{{ PYTHON }} -m pip install . -vv'
@@ -30,7 +30,6 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - python
     - mkl  # [linux or win]
-    - llvm-openmp  # [linux]
 
 test:
   imports:
