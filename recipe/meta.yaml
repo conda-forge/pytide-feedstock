@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/CNES/pangeo-pytide
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Tidal constituents analysis in Python.'
