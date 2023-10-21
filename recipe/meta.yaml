@@ -11,7 +11,12 @@ source:
   sha256: 8a38eb4e3cc6aca4286d3a29ef36530660f02472b7c807427fa3ffb7a7bc870b
 build:
   number: {{ build }}
-  script: '{{ PYTHON }} -m pip install . -vv'
+  {% if target_platform == "win-64" %}
+  script: {{ PYTHON }} -m pip install . -vv --global-option=build_ext --global-option="--generator=Visual Studio 17 2022"
+  {% else %}
+  script: {{ PYTHON }} -m pip install . -vv
+  {% endif %}
+
   skip: true  # [linux32 or win32 or py<36]
 
 requirements:
