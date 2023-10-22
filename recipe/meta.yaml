@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/CNES/pangeo-{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a38eb4e3cc6aca4286d3a29ef36530660f02472b7c807427fa3ffb7a7bc870b
+  sha256: 62f3c8f8ab99a068cef3dea32134a6be3a3a94522a33f6a3bc480afc29dff517
 build:
   number: {{ build }}
   {% if target_platform == "win-64" %}
