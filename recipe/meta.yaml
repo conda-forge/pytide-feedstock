@@ -28,7 +28,7 @@ requirements:
   host:
     - eigen
     - mkl-devel
-    - numpy
+    - numpy >=1.24
     - pip
     - python
     - setuptools
