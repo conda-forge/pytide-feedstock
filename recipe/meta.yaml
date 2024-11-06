@@ -1,6 +1,6 @@
 {% set name = "pytide" %}
 {% set version = "1.2.6" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}  # [linux or osx]
+    - {{ stdlib("c") }}    # [linux or osx]
     - make                   # [linux]
     - vs2017_win-64          # [win]
     - cmake
@@ -28,7 +29,6 @@ requirements:
     - python
     - setuptools
   run:
-    - {{ pin_compatible('numpy') }}
     - python
     - mkl  # [linux or win]
 
